@@ -1,0 +1,279 @@
+.create-subject-container {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background: #f9f9f9;
+  color: black;
+}
+
+h3 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.error-message {
+  color: red;
+  text-align: center;
+}
+
+.success-message {
+  color: green;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input,
+select,
+textarea {
+  width: 70%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 10px;
+  background: blue;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background: darkblue;
+}
+
+.cancel-button {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  background: gray;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cancel-button:hover {
+  background: darkgray;
+}
+
+/* css for subjectList card.jsx  */
+.subjects-container {
+  display: flex;
+  gap: 16px;
+  padding: 20px;
+  justify-items: center;
+  flex-wrap: wrap;
+}
+
+.subject-card {
+  background: #ffffff;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 300px;
+  width: 100%;
+  text-align: center;
+}
+
+.subject-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.subject-card h4 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.subject-card p {
+  font-size: 16px;
+  color: #555;
+  margin: 5px 0;
+}
+
+@media (max-width: 600px) {
+  .subjects-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* styling for create announcement  */
+.announcement-form {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.announcement-form-child {
+  height: 50%;
+}
+
+/* styling for announcement cards in SubjectPage.js  */
+.announcements-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Each announcement card */
+.announcement-card {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: flex-start;
+  transition: box-shadow 0.3s ease;
+}
+
+.announcement-card:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.announcement-left {
+  padding-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.announcement-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Flexbox for bigger screens (row direction) */
+@media (min-width: 768px) {
+  .announcement-card {
+    flex-direction: row;
+  }
+  .announcement-left {
+    flex: 1;
+    padding-right: 20px;
+  }
+  .announcement-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/* Flexbox for smaller screens (column direction) */
+@media (max-width: 767px) {
+  .announcement-card {
+    flex-direction: column;
+  }
+}
+
+.announcement-left {
+  padding-left: 2rem;
+}
+
+.announcement-right {
+  padding-left: 2rem;
+}
+
+/* Title of the announcement */
+.announcement-card h4 {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Content of the announcement */
+.announcement-card p {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+/* Time stamp of the announcement */
+.timestamp {
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+/* Button for deleting the announcement (only visible to the teacher) */
+.delete-btn {
+  background-color: #f44336;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.delete-btn:hover {
+  background-color: #d32f2f;
+}
+
+/* Attachments section */
+.attachments {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+/* Style for attachment images */
+.attachment-image {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+/* Style for download button */
+.download-btn {
+  width: 7rem;
+  background-color: #4caf50;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.download-btn:hover {
+  background-color: #388e3c;
+}
+
+/* Link styling for non-image attachments */
+.attachment-link {
+  color: #1a73e8;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.attachment-link:hover {
+  text-decoration: underline;
+}
