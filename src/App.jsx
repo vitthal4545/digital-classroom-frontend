@@ -16,7 +16,6 @@ import AcademicRecords from "./components/HOD/AcademicRecords";
 import AnnouncementDetails from "./components/Subjects/AnnouncementDetails";
 import TeacherMeetingsPage from "./components/Meetings/TeacherMeetingsPage";
 import StudentMeetingsPage from "./components/Meetings/StudentMeetingsPage";
-import VideoCall from "./components/Meetings/VideoCall";
 
 function App() {
   return (
@@ -45,7 +44,6 @@ function App() {
       />
       <Route path="/teacher/meetings" element={<TeacherMeetingsPage />} />
       <Route path="/student/meetings" element={<StudentMeetingsPage />} />
-      <Route path="/video-call/:meetingId" element={<VideoCall />} />
       <Route path="*" element={<h1>404 - Page Not Found</h1>} />
     </Routes>
   );
