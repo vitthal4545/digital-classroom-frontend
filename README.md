@@ -44,7 +44,7 @@ npm run dev
 ```
 
 🌐 Production URL
-🔗 https://your-digital-classroom-frontend.vercel.app
+🔗 https://digital-classroom-gamma.vercel.app
 
 👥 Project Members
 Pankaj G. Shivane (Team Lead)
