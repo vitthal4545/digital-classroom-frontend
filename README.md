@@ -42,3 +42,17 @@ npm install
 # Start the development server
 npm run dev
 ```
+
+🌐 Production URL
+🔗 https://your-digital-classroom-frontend.vercel.app
+
+👥 Project Members
+Pankaj G. Shivane (Team Lead)
+
+Om V. Parkhi
+
+Pranay P. Meshram
+
+Vaishnav D. Chavhan
+
+Vitthal G. Shivane
