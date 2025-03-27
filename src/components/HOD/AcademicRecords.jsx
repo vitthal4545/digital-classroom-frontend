@@ -36,8 +36,16 @@ const HODYearSelection = () => {
 
   const fetchHODProfile = async () => {
     try {
+      const token = localStorage.getItem("token");
+      if (!token) {
+        console.error("Token missing! Please login again.");
+        return;
+      }
+
       const hodResponse = await axios.get(`${BASE_URL}/api/hod/profile`, {
-        withCredentials: true,
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
       });
       setHodBranch(hodResponse.data.department);
     } catch (error) {
@@ -46,11 +54,20 @@ const HODYearSelection = () => {
   };
 
   const fetchData = async () => {
-    console.log("🚀 Sending API request...");
     try {
+      const token = localStorage.getItem("token");
+      if (!token) {
+        console.error("Token missing! Please login again.");
+        return;
+      }
+
       const response = await axios.get(
         `${BASE_URL}/api/hod/records?year=${year}&branch=${hodBranch}`,
-        { withCredentials: true }
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
       );
       setData(response.data);
     } catch (error) {

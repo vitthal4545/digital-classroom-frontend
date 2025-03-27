@@ -165,7 +165,7 @@ function SubjectPage() {
 
       const token = localStorage.getItem("token");
       const response = await axios.get(
-        `${BASE_URL}/announcements/joined-students/${subjectId}`,
+        `${BASE_URL}/api/announcements/joined-students/${subjectId}`,
         { headers: { Authorization: `Bearer ${token}` } }
       );
       setStudent(response.data);
